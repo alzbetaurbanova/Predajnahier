@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "Predajnahier", "..\..\..\..\wamp64\www\Predajňa hier\Predajnahier\Predajnahier\Predajnahier.phpproj", "{9259D9C0-1232-4C86-B039-BC0AC7D1820E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9259D9C0-1232-4C86-B039-BC0AC7D1820E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9259D9C0-1232-4C86-B039-BC0AC7D1820E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E897B46-1811-478D-94BB-3ADF0D2CB89C}
+	EndGlobalSection
+EndGlobal
