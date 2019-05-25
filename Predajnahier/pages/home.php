@@ -47,7 +47,7 @@ aby sa k tebe dostali v čo najlepšom stave</p>
     <img class="card-img-top" src="images/ps.png" alt="PS">
     <div class="card-body">
       <h5 class="card-title">PlayStation</h5>
-      <p class="card-text">Hry na PS3 alebo PS4</p>
+      <p class="card-text">Hry na PS2, PS3 alebo PS4</p>
       <p class="card-text"><small class="text-muted"></small></p>
     </div>
   </div>

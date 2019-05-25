@@ -11,15 +11,12 @@
         $result = $conn->query($sql);
     }
 ?>
-<div class="row">
-<div class="col-sm-9"></div>
-<div class="col-sm-3">
+<center>
 <form action="./index.php?link=games.php" method="post">
     <input type="text" name="hladaj" placeholder="Zadaj hľadané slovo">
     <button name="vyhladaj" type="hladanie" class="btn btn-primary">Hľadať</button><br><br>
 </form>
-</div>
-</div>
+</center>
 
 <div class="row">
 <?php while($row = $result->fetch_assoc())
@@ -29,7 +26,7 @@
         <div class="card" style="width: 320px;" style="max-height: 150px">
             <form method="post" action="./index.php?link=hra.php">
                 <input type="image" class="card-img-top" width=320px height=320px src="images/produkty/<?php echo $row["Obrazok"]; ?>" class="card-img" alt="obrazok"></a>
-                <input hidden placeholder="id" type="text" name="ID" value="<?php echo $row["ID"]; ?>"><br>
+                <input hidden placeholder="no pis" type="text" name="ID" value="<?php echo $row["ID"]; ?>"><br>
             </form>
             <div class="card-body">
             <h5 class="card-title"><?php echo $row["Nazov"]; ?></h5>

@@ -8,14 +8,9 @@ $result = $conn->query($sql);
 ?>
 
 <div class="jumbotron">
-<div class="row">
-<div class="col-sm-11">
-  <h1 class="display-3"><?php echo $row["Nazov"]; ?></h1><br> 
-        <p class="lead"><?php echo $row["Popisok"]; ?></p><br>
-        <center><img src="images/produkty/<?php echo $row["Obrazok"]; ?>" alt="obrazok"></img></center>
-    <hr class="my-4">
-</div>
-</div>
+  <h1 class="display-3"><?php echo $row["Nazov"]; ?></h1>
+  <p class="lead"><?php echo $row["Popisok"]; ?></p>
+  <hr class="my-4">
   <h5>
   <p>
     Platforma: <?php echo $row["Platforma"]; ?><br>
@@ -25,7 +20,6 @@ $result = $conn->query($sql);
   <p class="lead">
     <a class="btn btn-primary btn-lg" href="./index.php?link=kupit.php" role="button">Kúpiť</a>
   </h5>
-</div>
 </div>
 
 <?php } ?>
