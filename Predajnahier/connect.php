@@ -21,9 +21,16 @@ foreach ($_SERVER as $key => $value) {
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
-if ($conn->connect_error) {
+/*if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-echo "Connected successfully<br>";
+echo "Connected successfully<br>";*/
+
+$conn->query("SET CHARACTER SET utf8");
+
+	//alebo v xampp/mysql/bin/my.ini   doplnit:
+	//[mysqld]
+	//character-set-server=utf8
+	//collation-server=utf8_slovak_ci
 
 ?>

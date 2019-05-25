@@ -1,25 +1,22 @@
 <?php
-session_start();//session starts here
-
+if (isset($_POST['login'])) {
+    $myusername = $_POST['username'];
+    $mypassword = $_POST['password'];
+    $sql = "SELECT id FROM user WHERE meno = '$myusername' and heslo = '$mypassword'";
+    $result = mysqli_query($conn,$sql);
+    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+    $active = $row['active'];
+    $count = mysqli_num_rows($result);
+    if($count == 1) {
+        $_SESSION['username'] = $myusername;
+        $_SESSION['ID'] = $row['id'];
+        header("location: index.php?link=home.php");
+        $smsg = "NICE!";
+    }else {
+        $fmsg = "VaÅ¡e prihlasovacie meno alebo heslo niesÃº sprÃ¡vne";
+    }
+}
 ?>
-
-
-
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <link type="text/css" rel="stylesheet" href="bootstrap-3.2.0-dist\css\bootstrap.css">
-    <title>Login</title>
-</head>
-<style>
-    .login-panel {
-        margin-top: 150px;
-
-</style>
-
-<body>
-
-
 <div class="container">
     <div class="row">
         <div class="col-md-4"></div>
@@ -29,19 +26,15 @@ session_start();//session starts here
                     <h3 class="panel-title">Admin prihlasenie</h3>
                 </div>
                 <div class="panel-body">
-                    <form role="form" method="get" action="../index.php?link=login.php">
+                    <form role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
                         <fieldset>
                             <div class="form-group"  >
-                                <input class="form-control" placeholder="Meno" name="user" type="text" autofocus>
+                                <input class="form-control" placeholder="Meno" name="username" type="text" autofocus>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="Heslo" name="pass" type="password" value="">
+                                <input class="form-control" placeholder="Heslo" name="password" type="password" value="">
                             </div>
-
-
                                 <input class="btn btn-lg btn-success btn-block" type="submit" value="login" name="login" >
-
-                            <!--<a href="index.php" class="btn btn-lg btn-success btn-block">Login</a> -->
                         </fieldset>
                     </form>
                 </div>
@@ -49,35 +42,10 @@ session_start();//session starts here
         </div>
     </div>
 </div>
-
-
+<br>
+<?php if(isset($smsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div><?php } ?>
+<?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
+<body>
 </body>
 
 </html>
-
-<?php
-
-include("database/db_conection.php");
-
-if(isset($_GET['login']))
-{
-    $user_email=$_GET['user'];
-    $user_pass=$_GET['pass'];
-
-    $check_user="select * from admin WHERE user='$user' AND pass='$pass'";
-
-    $run=mysqli_query($dbcon,$check_user);
-
-    if(mysqli_num_rows($run))
-    {
-        echo "<script>window.open('welcome.php','_self')</script>";
-
-        $_SESSION['user']=$user;//here session is used and value of $user store in $_SESSION.
-
-    }
-    else
-    {
-        echo "<script>alert('Používate¾ské meno alebo heslo je nesprávne. ')</script>";
-    }
-}
-?>

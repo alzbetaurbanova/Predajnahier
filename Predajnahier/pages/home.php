@@ -1,56 +1,10 @@
 <?php
-	// Set session variables
-	//$_SESSION["datumDnes"] = date("l, d.m.Y");
-
-	$conn->query("SET CHARACTER SET utf8");
-	//alebo v xampp/mysql/bin/my.ini   doplnit:
-	//[mysqld]
-	//character-set-server=utf8
-	//collation-server=utf8_slovak_ci
-
 	$sql = "SELECT * FROM games";
 	$result = $conn->query($sql);
-
-    if($_GET["hladaj"]) $sql = "SELECT * FROM games WHERE Nazov LIKE '%".$_GET["hladaj"]."%'";	//ak obsahuje hľadaný reťazec
+  /*if($_GET["hladaj"]) $sql = "SELECT * FROM games WHERE Nazov LIKE '%".$_GET["hladaj"]."%'";	//ak obsahuje hľadaný reťazec
 	else $sql = "SELECT * FROM games";
-	$result = $conn->query($sql);
+	$result = $conn->query($sql);*/
 ?>
-
-<br><br>
-<!-- navigácia -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  
-
-  <div class="collapse navbar-collapse" id="navbarColor01">
-    <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
-        <h3><a class="nav-link" href="../index.php?link=home.php">Home</a></h3>
-      </li>
-      <li class="nav-item">
-        <h3><a class="nav-link" href="../index.php?link=games.php">Hry</a></h3>
-      </li>
-      <li class="nav-item">
-        <h3><a class="nav-link" href="../index.php?link=faq.php">FAQ</a></h3>
-      </li>
-      <li class="nav-item">
-        <h3><a class="nav-link" href="../index.php?link=login.php">Prihlásenie</a></h3>
-      </li>
-    </ul>
-    <div class="col-md-4">
-          <form action="index.php" method="get">
-			  <div class="form-row">
-				  <div class="col-md-8">
-					<input type="text" class="form-control" name="hladaj" placeholder="Zadaj hľadané slovo">
-				  </div>
-                    <div class="col-md-4">
-					<button type="submit" class="btn btn-primary">Hľadať</button>
-				  </div>
-			  </div>
-   
-  </div>
-</nav>
-
-<br><br> 
 
 <!--úvod box-->
 <div class="jumbotron">
@@ -67,14 +21,14 @@ aby sa k tebe dostali v čo najlepšom stave</p>
     <li>Výhodné akcie výmena, vďaka ktorým si zaobstaráš novinky už od 1 €.</li>
   </ul><br></p>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Prejsť na hry</a>
+    <a class="btn btn-primary btn-lg" href="./index.php?link=games.php" role="button">Prejsť na hry</a>
   </h5>
 </div>
 
 <!-- Cards kategorie -->
 <div class="card-group">
   <div class="card">
-    <img class="card-img-top" src="/images/pc.jpg" alt="PC">
+    <img class="card-img-top" src="images/pc.jpg" alt="PC">
     <div class="card-body">
       <h5 class="card-title">PC</h5>
       <p class="card-text">Hry na počítač - CD/DVD, hry na steam, u-play, epic, origin...</p>
@@ -82,7 +36,7 @@ aby sa k tebe dostali v čo najlepšom stave</p>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="/images/xbox.jpg" alt="Xbox">
+    <img class="card-img-top" src="images/xbox.jpg" alt="Xbox">
     <div class="card-body">
       <h5 class="card-title">X-Box</h5>
       <p class="card-text">Hry na X-Box 360 alebo X-Box One</p>
@@ -90,7 +44,7 @@ aby sa k tebe dostali v čo najlepšom stave</p>
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="/images/ps.png" alt="PS">
+    <img class="card-img-top" src="images/ps.png" alt="PS">
     <div class="card-body">
       <h5 class="card-title">PlayStation</h5>
       <p class="card-text">Hry na PS2, PS3 alebo PS4</p>

@@ -1,55 +1,22 @@
 <?php
-	// Set session variables
-	$_SESSION["datumDnes"] = date("l, d.m.Y");
+    error_reporting(0);
 
-	$conn->query("SET CHARACTER SET utf8");
-	//alebo v xampp/mysql/bin/my.ini   doplnit:
-	//[mysqld]
-	//character-set-server=utf8
-	//collation-server=utf8_slovak_ci
-
-	$sql = "SELECT * FROM games";
-	$result = $conn->query($sql);
-
-    if($_GET["hladaj"]) $sql = "SELECT * FROM games WHERE Nazov LIKE '%".$_GET["hladaj"]."%'";	//ak obsahuje hľadaný reťazec
-	else $sql = "SELECT * FROM games";
-	$result = $conn->query($sql);
+    if(isset($_POST["vyhladaj"])) {
+        $vyhladaj = $_POST["hladaj"];
+        $sql = "SELECT * FROM games WHERE Nazov LIKE '%".$vyhladaj."%'";
+        $result = $conn->query($sql);
+    }
+    else{
+        $sql = "SELECT * FROM games";
+        $result = $conn->query($sql);
+    }
 ?>
-<br><br>
-<!-- navigácia -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  
-
-  <div class="collapse navbar-collapse" id="navbarColor01">
-    <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
-        <h3><a class="nav-link" href="../index.php?link=home.php">Home</a></h3>
-      </li>
-      <li class="nav-item">
-        <h3><a class="nav-link" href="../index.php?link=games.php">Hry</a></h3>
-      </li>
-      <li class="nav-item">
-        <h3><a class="nav-link" href="../index.php?link=faq.php">FAQ</a></h3>
-      </li>
-      <li class="nav-item">
-        <h3><a class="nav-link" href="../index.php?link=login.php">Prihlásenie</a></h3>
-      </li>
-    </ul>
-    <div class="col-md-4">
-          <form action="index.php" method="get">
-			  <div class="form-row">
-				  <div class="col-md-8">
-                    <input type="hidden" name="link" value="games.php">
-					<input type="text" class="form-control" name="hladaj" placeholder="Zadaj hľadané slovo">
-				  </div>
-                    <div class="col-md-4">
-					<button type="submit" class="btn btn-primary">Hľadať</button>
-				  </div>
-			  </div>
-   
-  </div>
-</nav>
-<br><br> 
+<center>
+<form action="./index.php?link=games.php" method="post">
+    <input type="text" name="hladaj" placeholder="Zadaj hľadané slovo">
+    <button name="vyhladaj" type="hladanie" class="btn btn-primary">Hľadať</button><br><br>
+</form>
+</center>
 
 <div class="row">
 <?php while($row = $result->fetch_assoc())
@@ -57,7 +24,10 @@
 	?>
     <div class="col-sm-3">
         <div class="card" style="width: 320px;" style="max-height: 150px">
-            <a href="#"><img class="card-img-top" width=320px height=320px src="images/produkty/<?php echo $row["Obrazok"]; ?>" class="card-img" alt="obrazok" ></a>
+            <form method="post" action="./index.php?link=hra.php">
+                <input type="image" class="card-img-top" width=320px height=320px src="images/produkty/<?php echo $row["Obrazok"]; ?>" class="card-img" alt="obrazok"></a>
+                <input hidden placeholder="no pis" type="text" name="ID" value="<?php echo $row["ID"]; ?>"><br>
+            </form>
             <div class="card-body">
             <h5 class="card-title"><?php echo $row["Nazov"]; ?></h5>
             <p class="card-text">Na <?php echo $row["Platforma"]; ?></p>
@@ -67,8 +37,47 @@
         </div>
     </div>
    
-        <?php } ?>
+<?php } ?>
 </div>
 
- 
+<style>
+.container {
+  position: relative;
+  width: 50%;
+}
 
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+</style>

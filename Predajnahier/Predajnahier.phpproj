@@ -21,13 +21,15 @@
     <Compile Include="connect.php" />
     <Compile Include="index.php" />
     <Compile Include="pages\faq.php" />
+    <Compile Include="pages\hra.php" />
+    <Compile Include="pages\kupit.php" />
     <Compile Include="pages\login.php" />
     <Compile Include="pages\logout.php" />
     <Compile Include="pages\footer.php" />
     <Compile Include="pages\games.php" />
     <Compile Include="pages\header.php" />
     <Compile Include="pages\home.php" />
-    <Compile Include="pages\welcome.php" />
+    <Compile Include="pages\pridajhru.php" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="pages\" />
