@@ -67,9 +67,9 @@ if(isset($_POST["submit"])) {
 
 <form action="./index.php?link=pridajhru.php" method="post" enctype="multipart/form-data">
     Názov hry:<br>
-    <input placeholder="Hra" type="text" name="nazovhry" required autofocus><br>
+    <input placeholder="max 30 znakov" type="text" name="nazovhry" required autofocus><br>
     Popisok:<br>
-    <input placeholder="Max 10 000 znakov" type="text" name="popisok" required><br>
+    <input placeholder="max 10 000 znakov" type="text" name="popisok" required><br>
     Platforma:<br>
     <select name="platforma" required>
         <option value="PC">PC</option>

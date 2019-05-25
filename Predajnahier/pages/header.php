@@ -36,7 +36,7 @@
       <?php } ?>
     </ul>
     <div class="col-md-2">
-    <h4><?php if(isset($_SESSION['ID'])){ echo("Vitaj "); echo($_SESSION['username']); ?> <a class="prihlasenie" href="./index.php?link=logout.php">odhlasit sa</a> <?php } 
+    <h4><?php if(isset($_SESSION['ID'])){ echo("Vitaj "); echo($_SESSION['username']); ?> <a class="prihlasenie" href="./index.php?link=logout.php">Odhlásenie</a> <?php } 
     else { ?> <a class="prihlasenie" href="./index.php?link=login.php">Prihlásenie</a> <?php } ?></h4>
     <div class="col-md-4"><!--
           <form action="index.php" method="get">
