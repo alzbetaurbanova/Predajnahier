@@ -6,33 +6,34 @@ kupim@gamesky.sk</a> a o potvrdení objednávky vám napíšem do 24 hodín. Ďa
 <br><br><fieldset>
 	<legend>Nákup hry</legend>
 	<table>
-	<td><tr>Názov hry: <Input type="text" name="hra" value="" size="25"></tr></td><br>
+	<td><tr>Názov hry: <br><Input type="text" name="hra" value="" size="25"></tr></td><br>
 	</table>
 </fieldset>
 <br><br><fieldset>
 		<legend>Základné informácie</legend>
 		<table>
-			<td><tr><br>Meno: <Input type="text" name="meno" value="" size="25"></tr></td><BR>
-			<td><tr>Priezvisko: <Input type="text" name="priezvisko" value="" size="25"></tr></td><br>
+			<td><tr><br>Meno: <br><Input type="text" name="meno" value="" size="25"></tr></td><BR>
+			<td><tr>Priezvisko: <br> <Input type="text" name="priezvisko" value="" size="25"></tr></td><br>
 	
-			<td><tr>Pohlavie: </tr>
-				<tr><input type="radio" name="switch" value="muz"> Muž</tr>
-				<tr><input type="radio" name="switch" value="zena"> Žena</tr>
-				<tr><input type="radio" name="switch" value="ine" checked> Iné</tr></td><br>
+			<br><td><tr>Pohlavie: </tr>
+				<tr><br><input type="radio" name="switch" value="muz"> Muž</tr>
+				<tr><br><input type="radio" name="switch" value="zena"> Žena</tr>
+				<tr><br><input type="radio" name="switch" value="ine" checked> Iné</tr></td><br><br>
 		  
-			<td><tr>Email: <input type="text" name="email" value="@" size="25" required></tr></td><br>
+			<td><tr>Email:<br> <input type="text" name="email" value="@" size="25" required></tr></td><br>
 		
-			<td><tr>Telefón: <input type="text" name="phone" value="+421" size="24"></tr></td><br>
+			<td><tr>Telefón:<br> <input type="text" name="phone" value="+421" size="24"></tr></td><br>
 		</table>
 	</fieldset>
 	
 	<br><br><fieldset>
 		<legend>Adresa bydliska:</legend>
 		<table>
-			<tr><td>Obec: <input type="text" name="bydlisko" value="" size="25"required></td></tr>
-			<tr><td>Ulica: <input type="text" name="ulica" value="" size="25"></td>
-			<td>č.d: <input type="text" name="cd" value="" size="5" required></tr>
-			<tr><td>PSČ: <input type="text" name="PSC" value="" size="5" required></td></tr>
+			<tr><td>Obec: <br><input type="text" name="bydlisko" value="" size="25"required></td>
+            <td>PSČ: <br><input type="text" name="PSC" value="" size="5" required></td></tr>
+			<tr><td>Ulica: <br><input type="text" name="ulica" value="" size="25"></td>
+			<td>č.d: <br><input type="text" name="cd" value="" size="5" required></tr>
+			
 		</table>
 	</fieldset>
 	
@@ -54,7 +55,8 @@ kupim@gamesky.sk</a> a o potvrdení objednávky vám napíšem do 24 hodín. Ďa
 		
 		** pri elektronickom kľúči, dobierka nieje možná<br>
 	</fieldset>
-	
+<br>Dodatočné informácie pre predajcu:<br>
+<textarea rows="5" cols="50"<input placeholder="nepovinné" type="text" name="info"></textarea><br>	
 <br><br>
   <P>Súhlasím so spracovaním osobných údajov: <input type="checkbox" name="zaskrtnute" value="suhlasi"></P>
 </form>

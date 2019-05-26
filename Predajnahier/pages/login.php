@@ -23,7 +23,7 @@ if (isset($_POST['login'])) {
         <div class="col-md-4">
             <div class="login-panel panel panel-success">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Admin prihlasenie</h3>
+                    <h3 class="panel-title">Admin prihlásenie</h3>
                 </div>
                 <div class="panel-body">
                     <form role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
