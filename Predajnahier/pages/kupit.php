@@ -59,7 +59,6 @@ kupim@gamesky.sk</a> a o potvrdení objednávky vám napíšem do 24 hodín. Ďa
 <textarea rows="5" cols="50"<input placeholder="nepovinné" type="text" name="info"></textarea><br>	
 <br><br>
   <P>Súhlasím so spracovaním osobných údajov: <input type="checkbox" name="zaskrtnute" value="suhlasi"></P>
-</form>
 <p><center><input align="center" type="submit" value="Odoslať"></center><br><br>
 <input type="reset" value="Vymazať všetky údaje"></p><br><br>
 
