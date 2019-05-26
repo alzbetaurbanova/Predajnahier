@@ -31,7 +31,7 @@
       </li>
       <?php if(isset($_SESSION['ID'])) { ?>
       <li class="nav-item">
-        <h3><a class="nav-link" href="./index.php?link=pridajhru.php">Pridaj Produkt</a></h3>
+        <h3><a class="nav-link" href="./index.php?link=pridajhru.php">Pridaj produkt</a></h3>
       </li>
       <?php } ?>
     </ul>
