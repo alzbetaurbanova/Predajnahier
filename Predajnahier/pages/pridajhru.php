@@ -69,7 +69,7 @@ if(isset($_POST["submit"])) {
     Názov hry:<br>
     <input placeholder="max 30 znakov" type="text" name="nazovhry" required autofocus><br>
     Popisok:<br>
-    <input placeholder="max 10 000 znakov" type="text" name="popisok" required><br>
+    <textarea rows="5" cols="50"<input placeholder="max 10 000 znakov" type="text" name="popisok" required ></textarea><br>
     Platforma:<br>
     <select name="platforma" required>
         <option value="PC">PC</option>
