@@ -16,7 +16,7 @@ aby sa k tebe dostali v čo najlepšom stave</p>
   <hr class="my-4">
   <h5>
   <ul>
-    <li>Tisíce hraných hier so zárukou 24 mesiacov.</li>
+    <li>Hrané hry so zárukou 24 mesiacov.</li>
     <li>Výkup konzolových hier protiúčtom za iný tovar alebo za hotovosť.</li>
     <li>Výhodné akcie výmena, vďaka ktorým si zaobstaráš novinky už od 1 €.</li>
   </ul><br></p>

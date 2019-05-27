@@ -1,3 +1,4 @@
+<!-- Vyhľadávanie -->
 <?php
     error_reporting(0);
 
@@ -20,7 +21,7 @@
 </form>
 </div>
 </div>
-
+<!-- Zoznam hier -->
 <div class="row">
 <?php while($row = $result->fetch_assoc())
 {

@@ -11,7 +11,7 @@ if (isset($_POST['login'])) {
         $_SESSION['username'] = $myusername;
         $_SESSION['ID'] = $row['id'];
         header("location: index.php?link=home.php");
-        $smsg = "NICE!";
+        $smsg = "Používateľ prihlásený!";
     }else {
         $fmsg = "Vaše prihlasovacie meno alebo heslo niesú správne";
     }

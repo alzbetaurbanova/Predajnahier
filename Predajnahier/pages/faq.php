@@ -1,3 +1,4 @@
+<!-- FAQ -->
 <div class="jumbotron">
 <h2>Ako to tu funguje? </h2>
 Hry na tejto stránke sú z druhej ruky, teda niesú čisto nové. Od toho sa samozrejme odvíja i cena - nepoužívané, 

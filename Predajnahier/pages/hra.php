@@ -6,7 +6,7 @@ $result = $conn->query($sql);
 <?php while($row = $result->fetch_assoc())
 {
 ?>
-
+<!-- Výpis informácií z databázy na stránku -->
 <div class="jumbotron">
 <div class="row">
 <div class="col-sm-11">

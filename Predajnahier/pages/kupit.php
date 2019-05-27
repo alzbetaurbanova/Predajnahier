@@ -1,7 +1,7 @@
 <div class="jumbotron">
 <h3>POZOR! Tento formulár automaticky nevytvára objednávky. Formulár mi bude poslaný na mail <a href="mailto:kupim@gamesky.sk?Subject=Objednavka%20hry" target="_top">
 kupim@gamesky.sk</a> a o potvrdení objednávky vám napíšem do 24 hodín. Ďakujem za pochopenie.</h3>
-
+<!-- Formulár -->
 <form action="mailto:kupim@gamesky.sk?Subject=Objednavka%20hry" method="post" enctype="text/plain">
 <br><br><fieldset>
 	<legend>Nákup hry</legend>

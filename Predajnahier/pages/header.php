@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="sk">
-
+<!-- Hlavička -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
@@ -15,10 +15,9 @@
             
         </div>
         <br><br>
+<!-- Navigácia -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  
-
-  <div class="collapse navbar-collapse" id="navbarColor01">
+    <div class="collapse navbar-collapse" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
     <li class="nav-item">
         <h3><a class="nav-link" href="./index.php?link=home.php">Home</a></h3>
@@ -38,6 +37,7 @@
     <div class="col-md-2">
     <h4><?php if(isset($_SESSION['ID'])){ echo("Vitaj "); echo($_SESSION['username']); ?> <a class="prihlasenie" href="./index.php?link=logout.php">Odhlásenie</a> <?php } 
     else { ?> <a class="prihlasenie" href="./index.php?link=login.php">Prihlásenie</a> <?php } ?></h4>
+    <!-- Staré vyhľadávanie -->
     <div class="col-md-4"><!--
           <form action="index.php" method="get">
 			      <div class="form-row">
